@@ -1,0 +1,25 @@
+
+.star {
+	font-family:'star';
+}
+.navbar-default {
+	background-image: "../images/darkness.png";
+	background-repeat: no-repeat;
+   }
+
+   a {
+	   color:#FFFF00 !important;
+   }
+
+.letter-button-color {
+    color: yellow;
+  }
+  #test {
+	  color:yellow;
+  }
+
+  .ch {
+	  color:yellow;
+	  text-align:center;
+	  font-size:80px;
+  }
