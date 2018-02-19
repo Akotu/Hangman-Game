@@ -1,5 +1,5 @@
 // Set the variables to start a foundation..
-var wordList = ["hansolo", "lukeskywalker", "yoda", "darthvader", "chewbacca", "c3po"];
+var wordList = ["hansolo", "lukeskywalker", "yoda", "darthvader", "chewbacca", "c3po", "rey", "jangofett"];
 
 var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var chosenWord = "";
@@ -78,7 +78,7 @@ function checkLetters(letter) {
 }
 
 
-function roundComplete() {
+function complete() {
 
 
     document.getElementById('word-blank').innerHTML = blanksAndSuccesses.join(" ");
@@ -90,8 +90,8 @@ function roundComplete() {
 
     if (lettersInChosenWord.join(" ") === blanksAndSuccesses.join(" ")) {
         winCounter++;
-        alert("Good Job! You guessed: " );
-        document.getElementById('win-counter').innerHTML = winCounter;
+        alert("Winner Winner Chicken Dinner!" );
+        document.getElementById('win-counter').innerHTML = "You have won: " + winCounter + " time(s)";
         startGame();
     } else if (numGuesses === 0) {
         document.getElementById('loss-counter').innerHTML = lossCounter++;
@@ -99,6 +99,9 @@ function roundComplete() {
         alert("you ran out of guesses!");
         startGame();
     }
+    if (winCounter
+
+    
 
 
 
@@ -110,7 +113,7 @@ document.onkeyup = function (event) {
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
 
     checkLetters(letterGuessed)
-    roundComplete();
+    complete();
 
 
 }
