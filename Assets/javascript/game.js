@@ -68,7 +68,7 @@ function roundComplete() {
    
 
     document.getElementById('word-blank').innerHTML = blanksAndSuccesses.join(" ");
-    document.getElementById('guesses-left').innerHTML = numGuesses;
+    document.getElementById('guesses-left').innerHTML = "you have " + numGuesses + " Guess(es) left";
     document.getElementById('wrong-guesses').innerHTML = wrongGuesses.join(" ");
 
 
@@ -77,10 +77,10 @@ function roundComplete() {
     if (lettersInChosenWord.join(" ") === blanksAndSuccesses.join(" ")) {
         winCounter++;
         alert("Winner Winner Chicken Dinner!");
-        document.getElementById('win-counter').innerHTML = winCounter;
+        document.getElementById('win-counter').innerHTML = "you have won " + winCounter + " time(s)";
         startGame();
     } else if (numGuesses === 0) {
-        document.getElementById('loss-counter').innerHTML = lossCounter++;
+        document.getElementById('loss-counter').innerHTML = " you have lost " + lossCounter++ + " time(s)";
         document.getElementById('wrong-guesses').innerHTML = "";
         alert("Too bad so sad!");
         startGame();
